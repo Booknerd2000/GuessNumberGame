@@ -6,9 +6,13 @@ public class GuessingNumber {
         Scanner keyboard;
         keyboard = new Scanner(System.in);
 
-        int randomNumber;
+        int randomNumber,userNumber;
         randomNumber = (int)(Math.random()*100);
         System.out.println(randomNumber);
+
+        System.out.println("I'm thinking of a number between 1 and 100.");
+        System.out.println("Guess my number.");
+        userNumber= keyboard.nextInt();
 
     }
 }
