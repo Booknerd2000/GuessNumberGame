@@ -7,6 +7,7 @@ public class GuessingNumber {
         keyboard = new Scanner(System.in);
 
         int randomNumber,userNumber;
+
         randomNumber = (int)(Math.random()*100);
         System.out.println(randomNumber);
 
@@ -14,5 +15,15 @@ public class GuessingNumber {
         System.out.println("Guess my number.");
         userNumber= keyboard.nextInt();
 
+
+
+        if (userNumber>randomNumber){
+            System.out.println("That's too high");
+        }
+        else if (userNumber<randomNumber){
+            System.out.println("That's too low");
+        }
+        System.out.println("You guessed it!");
+        System.out.println("My number is "+randomNumber);
     }
 }
