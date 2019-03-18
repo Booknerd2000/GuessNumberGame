@@ -14,16 +14,22 @@ public class GuessingNumber {
         System.out.println("I'm thinking of a number between 1 and 100.");
         System.out.println("Guess my number.");
         userNumber= keyboard.nextInt();
-
-
-
-        if (userNumber>randomNumber){
+        boolean  wrongNumber = true;
+    while(wrongNumber) {
+        if (userNumber > randomNumber) {
             System.out.println("That's too high");
+            userNumber= keyboard.nextInt();
         }
-        else if (userNumber<randomNumber){
+        else if (userNumber < randomNumber) {
             System.out.println("That's too low");
+            userNumber =keyboard.nextInt();
         }
-        System.out.println("You guessed it!");
-        System.out.println("My number is "+randomNumber);
+        else {
+            wrongNumber = false;
+            System.out.println("!You guessed it!");
+            System.out.println("My number is " + randomNumber);
+
+        }
+    }
     }
 }
